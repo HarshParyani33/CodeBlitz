@@ -67,4 +67,4 @@ const questionSchema = new mongoose.Schema({
     
 },{timestamps:true});
 
-const Question = mongoose.model('Question', questionSchema);
+export const Question = mongoose.model('Question', questionSchema);

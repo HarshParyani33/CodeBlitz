@@ -37,7 +37,13 @@ const userSchema = new mongoose.Schema({
     github: {
         type: String,
     },
+    friendList: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+        }
+    ],
 
 },{timestamps:true});
 
-const User = mongoose.model("User", userSchema);
+export const User = mongoose.model("User", userSchema);
